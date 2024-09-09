@@ -2,3 +2,5 @@
 .DS_Store
 /node_modules/
 .env
+/parking.server/target/
+/parking.server/src/main/resources/application.properties
