@@ -2,5 +2,97 @@
 .DS_Store
 /node_modules/
 .env
+
+
+
 /parking.server/target/
 /parking.server/src/main/resources/application.properties
+/parking.server/.idea
+
+
+
+# Logs
+spring.log
+*.log
+
+# Application properties
+/application.yml
+/application-*.properties
+/application-*.yml
+
+# Sensitive config files
+.env
+*.env
+
+# Compiled class files
+*.class
+
+# Spring Boot packaging files
+/target/
+/out/
+
+# Dependency directory
+/lib/
+/.mvn/wrapper/maven-wrapper.jar
+
+# Project-specific files
+*.war
+*.jar
+*.ear
+
+# IDE settings (adjust for your IDE)
+## Eclipse
+.project
+.classpath
+.settings/
+.springBeans
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+## VS Code
+.vscode/
+
+# Maven and Gradle artifacts
+/.mvn/
+/target/
+/build/
+/.gradle
+/gradle-app.setting
+!gradle-wrapper.jar
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Package manager files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Test results
+/test-output/
+/surefire-reports/
+/test-results/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.swp
+*~ 
+*.temp
+
+# MacOS files
+*.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# JetBrains Rider
+.idea/
+.idea_modules/
