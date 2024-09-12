@@ -1,0 +1,23 @@
+.content-max{
+    width: calc(100vw - var(--min_sidebar_width));
+}
+
+
+.content-min{
+    width: calc(100vw - var(--max_sidebar_width));
+}
+
+.sidebar-min{
+    width: var(--min_sidebar_width);
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-max{
+    width: var(--max_sidebar_width);
+}
+.layout .content-max, .content-min{
+    height: calc(100vh - 49px);
+    overflow-y: scroll;
+}
+

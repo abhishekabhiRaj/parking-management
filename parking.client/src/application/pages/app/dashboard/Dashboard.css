@@ -1,0 +1,22 @@
+.dashboard .accordion-header .accordion-button{
+    background: transparent !important;
+    outline: 0px !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid var(--borderColor);
+    padding: 7.44px !important;
+} 
+._icon{
+    background: color-mix(in srgb, var(--primary) 70%, #fff 10%);
+    /* background: #fff; */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid color-mix(in srgb, var(--primary) 10%, #000 5%);
+}
+
+.bg-primary--0_1{
+    background: color-mix(in srgb, var(--primary) 6%, #000 10%);
+}
