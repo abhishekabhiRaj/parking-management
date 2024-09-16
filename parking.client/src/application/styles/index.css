@@ -45,3 +45,12 @@ header{
     flex: 1;
 }
 
+
+/* modal */
+.modal-header{
+    background: color-mix(in srgb, var(--primary) 10%, #000 10%) !important;
+}
+
+.modal-header .btn-close{
+    color : #fff !important;
+}
