@@ -9,7 +9,7 @@ import PageTitle from "application/components/PageTitle/PageTitle";
 const Layout = React.lazy(() => import('application/components/Layout/Layout'));
 
 
-const ParkingType = () => {
+const VehicleType = () => {
     const [pending, setPending] = useState(true);
     const [showModal, setShowModal] = useState(false);
     const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
@@ -84,11 +84,11 @@ const ParkingType = () => {
     
     return (
         <>
-            <Suspense fallback={<div>Parking Type Loading...</div>}>
+            <Suspense fallback={<div>Vehicle Type Loading...</div>}>
                 <Layout>
                     <Card className="p-2 bg-transparent border-0">
                         <PageTitle
-                            title="Manage Parking Type"
+                            title="Manage Vehicle Type"
                             handleModal={handleModal}
                             isOnlyTitle={true}
                         />
@@ -117,5 +117,5 @@ const ParkingType = () => {
     )
 }
 
-export default ParkingType;
+export default VehicleType;
 

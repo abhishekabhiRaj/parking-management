@@ -14,7 +14,7 @@ export const sidebarList = [
     {
         "title":"Vehicle Type",
         "haveSubMenu":false,
-        "path":"/dasboard",
+        "path":"/vehicle-type",
         "icon": 'BsBusFrontFill'
     },
     {
