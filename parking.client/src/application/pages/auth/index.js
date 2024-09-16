@@ -32,11 +32,11 @@ import classNames from "classnames"; // Optional, for better class handling
                         </section>
 
                         <div className="tab-content">
-                            {location.pathname == "/login" && <div className={classNames("tab-pane fade", { "show active" : location.pathname == "/login" })} id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                            {location.pathname === "/login" && <div className={classNames("tab-pane fade", { "show active" : location.pathname === "/login" })} id="pills-login" role="tabpanel" aria-labelledby="tab-login">
                                 <SocialLogin />
                                 <LoginForm />
                             </div>}
-                            {location.pathname == "/register" &&<div className={classNames("tab-pane fade", { "show active" : location.pathname == "/register" })} id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+                            {location.pathname === "/register" &&<div className={classNames("tab-pane fade", { "show active" : location.pathname === "/register" })} id="pills-register" role="tabpanel" aria-labelledby="tab-register">
                                 <RegisterForm />
                             </div>}
                         </div>

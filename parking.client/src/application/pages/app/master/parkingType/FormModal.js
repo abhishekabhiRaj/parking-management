@@ -4,13 +4,13 @@ import Modal from 'react-bootstrap/Modal';
 
 // Parking Type Form Modal
 function FormModal({ showModal, setShowModal }) {
-    console.log("setShowModalsetShowModal")
     const handleClose = () => {
         setShowModal(false);
     }
     return (
         <>
             <Modal
+                className="modal-xl"
                 show={showModal}
                 onHide={() => handleClose()}
                 backdrop="static"

@@ -9,37 +9,37 @@ export const sidebarList = [
         "title":"Parking Type",
         "haveSubMenu":false,
         "path":"/parking-type",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsBank2'
     },
     {
         "title":"Vehicle Type",
         "haveSubMenu":false,
         "path":"/dasboard",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsBusFrontFill'
     },
     {
         "title":"Duration",
         "haveSubMenu":false,
         "path":"/dasboard",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsClockFill'
     },
     {
         "title":"Manage Parking Space",
         "haveSubMenu":false,
         "path":"/dasboard",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsDiagram3Fill'
     },
     {
         "title":"Site Allocation",
         "haveSubMenu":false,
         "path":"/dasboard",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsDoorOpenFill'
     },
     {
         "title":"Parking Charges",
         "haveSubMenu":false,
         "path":"/dasboard",
-        "icon": 'BsFillHouseFill'
+        "icon": 'BsCash'
     },
    
     // {

@@ -4,6 +4,7 @@ import { Card, Col, Row, Button } from "react-bootstrap";
 import DataTable from 'react-data-table-component';
 import { BsSearch } from "react-icons/bs";
 import FormModal from "./FormModal";
+import PageTitle from "application/components/PageTitle/PageTitle";
 
 const Layout = React.lazy(() => import('application/components/Layout/Layout'));
 
@@ -80,17 +81,16 @@ const ParkingType = () => {
         setShowModal(true);
     }
 
+    
     return (
         <>
             <Suspense fallback={<div>Parking Type Loading...</div>}>
                 <Layout>
                     <Card className="p-2 bg-transparent border-0">
-                        <div className="d-flex align-items-center justify-content-between">
-                            <p className="m-0 fw-semibold">Manage Parking Type</p>
-                            <Button className="btn-sm">
-                                Add New
-                            </Button>
-                        </div>
+                        <PageTitle
+                            handleModal={handleModal}
+                            isOnlyTitle={false}
+                        />
                     </Card>
                     <Card className="">
                         <DataTable
@@ -117,3 +117,4 @@ const ParkingType = () => {
 }
 
 export default ParkingType;
+
