@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { route } from './route';
@@ -9,7 +9,8 @@ import { route } from './route';
 
 function App() {
   return (
-    <Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
        {/* Redirect from "/" to "/dashboard" */}
        <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
@@ -17,6 +18,7 @@ function App() {
         <Route key={i} path={item.path} element={<item.component/>} />
       ))}
     </Routes>
+    </Suspense>
   );
 }
 
