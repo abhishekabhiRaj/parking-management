@@ -1,17 +1,56 @@
-
-:root{
-    --primary : #0e6efb;
-    --max_sidebar_width : 200px;
-    --min_sidebar_width : 52px;
-    --borderColor : #dee2e6;
+:root {
+    --primary: #0e6efb;
+    --max_sidebar_width: 200px;
+    --min_sidebar_width: 52px;
+    --borderColor: #dee2e6;
 }
 
-*{
+* {
     font-size: 0.93rem;
     border-radius: 0% !important;
 }
 
-body{
+body {
     background: #f5f5f5;
 }
 
+/* react table */
+.rdt_TableHeadRow {
+    background: color-mix(in srgb, var(--primary) 5%, #000 3%) !important;
+    min-height: 36px !important;
+}
+
+.rdt_TableRow {
+    min-height: 36px !important;
+}
+
+header{
+    padding: 0px !important;
+    justify-content: unset !important;
+    padding: 8px !important;
+}
+
+/* react table  */
+
+.search-box {
+    border: 1px solid color-mix(in srgb, var(--primary) 5%, #000 3%) !important;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+
+/* modal */
+.modal-header{
+    background: color-mix(in srgb, var(--primary) 10%, #000 10%) !important;
+}
+
+.modal-header .btn-close{
+    color : #fff !important;
+}
