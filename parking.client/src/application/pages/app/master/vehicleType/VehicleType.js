@@ -90,7 +90,7 @@ const VehicleType = () => {
                         <PageTitle
                             title="Manage Vehicle Type"
                             handleModal={handleModal}
-                            isOnlyTitle={true}
+                            isOnlyTitle={false}
                         />
                     </Card>
                     <Card className="">

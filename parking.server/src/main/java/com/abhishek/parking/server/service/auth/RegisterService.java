@@ -17,7 +17,7 @@ public class RegisterService {
 
 
     public User registerUser(UserDTO userDTO) {
-        User user = new User(userDTO.getName(), userDTO.getUsername(), userDTO.getEmail(), userDTO.getPassword());
+        User user = new User(userDTO.getName(), userDTO.getUsername(), userDTO.getEmail(), userDTO.getPassword(), userDTO.getRoles());
         return registerRepository.save(user);
     }
 

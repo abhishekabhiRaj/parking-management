@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class RegisterController {
     @Autowired
     private RegisterService registerService;
@@ -21,8 +21,10 @@ public class RegisterController {
     public ResponseEntity<Response> registerUser(@RequestParam String name,
                                                  @RequestParam String username,
                                                  @RequestParam String email,
-                                                 @RequestParam String password){
-        UserDTO userDTO = new UserDTO(name, username, email, password);
+                                                 @RequestParam String password,
+                                                 @RequestParam String roles
+    ){
+        UserDTO userDTO = new UserDTO(name, username, email, password, roles);
         Response response = new Response("User registered successfully", "200");
         User newUser = registerService.registerUser(userDTO);
         System.out.println(newUser);
@@ -31,6 +33,12 @@ public class RegisterController {
     
     @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUser() {
+        List<User> users = registerService.findAll();
+        return ResponseEntity.ok(users);
+    }
+
+    @GetMapping("/all_1")
+    public ResponseEntity<List<User>> getAllUser1() {
         List<User> users = registerService.findAll();
         return ResponseEntity.ok(users);
     }
