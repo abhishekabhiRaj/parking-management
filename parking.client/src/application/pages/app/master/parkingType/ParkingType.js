@@ -74,6 +74,7 @@ const ParkingType = () => {
             .catch(function (error) { });
     };
 
+
     // react data table header part
     const subHeaderComponentMemo = React.useMemo(() => {
         filterRecords();
@@ -106,6 +107,182 @@ const ParkingType = () => {
     useEffect(() => {
         fetchRecord();
     }, [])
+
+    const [uniqueGalleryTypes, setUniqueGalleryTypes] = useState([]);
+
+     const rawData = [
+        {
+            "id": 28,
+            "title": "Cleaning Service",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/1084788011726581437.jpg",
+            "gallery_type_id": 3,
+            "file_type": "image",
+            "gallery_type_name": "Residential Cleaning",
+            "file_name": "1084788011726581437.jpg"
+        },
+        {
+            "id": 20,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/4214053261726580771.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "4214053261726580771.jpg"
+        },
+        {
+            "id": 30,
+            "title": "Post paint deep cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/12964994811726581587.jpg",
+            "gallery_type_id": 1,
+            "file_type": "image",
+            "gallery_type_name": "Post Paint Deep Cleaning",
+            "file_name": "12964994811726581587.jpg"
+        },
+        {
+            "id": 32,
+            "title": "Post paint deep cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/14653489111726581609.jpg",
+            "gallery_type_id": 1,
+            "file_type": "image",
+            "gallery_type_name": "Post Paint Deep Cleaning",
+            "file_name": "14653489111726581609.jpg"
+        },
+        {
+            "id": 31,
+            "title": "Post paint deep cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/5193098691726581598.jpg",
+            "gallery_type_id": 1,
+            "file_type": "image",
+            "gallery_type_name": "Post Paint Deep Cleaning",
+            "file_name": "5193098691726581598.jpg"
+        },
+        {
+            "id": 23,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/2670997741726580822.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "2670997741726580822.jpg"
+        },
+        {
+            "id": 22,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/11935407371726580810.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "11935407371726580810.jpg"
+        },
+        {
+            "id": 27,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/19437137671726581113.mp4",
+            "gallery_type_id": 2,
+            "file_type": "video",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "19437137671726581113.mp4"
+        },
+        {
+            "id": 18,
+            "title": "Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/6669161131726580696.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "6669161131726580696.jpg"
+        },
+        {
+            "id": 19,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/9690538941726580737.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "9690538941726580737.jpg"
+        },
+        {
+            "id": 29,
+            "title": "Cleaning Service",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/16413615931726581450.jpg",
+            "gallery_type_id": 3,
+            "file_type": "image",
+            "gallery_type_name": "Residential Cleaning",
+            "file_name": "16413615931726581450.jpg"
+        },
+        {
+            "id": 26,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/2865299541726581100.mp4",
+            "gallery_type_id": 2,
+            "file_type": "video",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "2865299541726581100.mp4"
+        },
+        {
+            "id": 24,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/17981536401726580843.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "17981536401726580843.jpg"
+        },
+        {
+            "id": 25,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/19217913591726581087.mp4",
+            "gallery_type_id": 2,
+            "file_type": "video",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "19217913591726581087.mp4"
+        },
+        {
+            "id": 21,
+            "title": "Home Cleaning",
+            "status": 1,
+            "gallery_file": "https://otifs.com/stage/public/uploads/gallery/1874692351726580787.jpg",
+            "gallery_type_id": 2,
+            "file_type": "image",
+            "gallery_type_name": "Home Cleaning",
+            "file_name": "1874692351726580787.jpg"
+        }
+    ]
+
+    useEffect(() => {
+        const uniqueTypes = rawData.reduce((raghavResultArray, current) => {
+            if (!raghavResultArray.some(item => item.gallery_type_id === current.gallery_type_id)) {
+                raghavResultArray.push({
+                    gallery_type_name: current.gallery_type_name,
+                    gallery_type_id: current.gallery_type_id,
+                });
+            }
+            return raghavResultArray;
+        }, []);
+
+        uniqueTypes.unshift({
+            gallery_type_name: 'All',
+            gallery_type_id: '%',
+        });
+
+        setUniqueGalleryTypes(uniqueTypes);
+    }, []);
+
+    
 
 
     return (

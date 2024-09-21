@@ -29,4 +29,14 @@ public class User {
         this.password = password;
         this.roles = roles;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", roles='" + roles + '\'' +
+                '}';
+    }
 }
